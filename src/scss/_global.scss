@@ -4,6 +4,114 @@
     padding: 0;
 }
 
+:root {
+    font-family: $f_boddy;
+    color: $c_txt_boddy;
+    font-weight: 400;
+}
+
 body {
-    background-color: $test-color;
+    background-color: $c_bg_body;
+    background-image: url(../img/bg-mobile.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: 0 -10px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-container {
+    width: calc(100% - 70px);
+    margin-top: 0.6rem;
+
+    header {
+        width: 100%;
+        padding: 1.2rem 0;
+        margin-bottom: 1.7rem;
+
+        img {
+            width: 40%;
+            max-width: 200px;
+        }
+    }
+
+    main {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 4.5rem;
+
+        .hero {
+            width: 100%;
+            margin-bottom:3.8rem;
+            object-fit: contain;
+        }
+
+        .content-container {
+
+            h1 {
+                font-family: $f_heading;
+                font-weight: 600;
+                font-size: 1.5rem;
+                color: $c_txt_heading;
+                margin-bottom: 1rem;
+            }
+    
+            p {
+                line-height: 1.5rem;
+                margin-bottom: 2rem;
+            }
+
+            .button {
+                padding: 0.7rem 4.9rem;
+                background-color: $c_bg_button;
+                border-radius: 50px;
+                font-size: 0.8rem;
+                font-weight: 600;
+                text-decoration: none;
+                color: lighten($c_txt_button, 10%);
+                box-shadow: 0 2px 5px 0px hsla(0, 0%, 0%, 0.3);
+                transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+                cursor: pointer;
+
+                &:hover {
+                    background-color: $c_active;
+                    color: $c_bg_button;
+                }
+            }
+        }
+    }
+
+    footer {
+        margin-bottom: 2.5rem;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+
+       ul {
+            list-style-type: none;
+            display: flex;
+            gap: 0.7rem;     
+
+            li {
+                font-size: 1rem;
+                width: 1.8rem;
+                height: 1.8rem;
+                border: 1px solid $c_bg_button;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: $c_bg_button;
+                cursor: pointer;
+                transition: background-color 0.2s ease-in-out, color 0.1s ease-in-out;
+
+                &:hover {
+                    border: 1px solid $c_active;
+                    color: $c_active;
+                }
+            }
+       }
+    }
 }
